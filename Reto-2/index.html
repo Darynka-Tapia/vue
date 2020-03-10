@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="toggleModal">Show Modal</button>
+        <modal 
+        v-show=showModal
+        v-on:close="toggleModal"
+        v-bind:title="title"
+        >
+        <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus vel, recusandae tenetur sequi fugit aliquid beatae, debitis deserunt dignissimos magnam ratione rem eos unde libero quidem. Tenetur dolor sunt saepe.</p>
+        </modal>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
